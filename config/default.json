@@ -2,5 +2,5 @@
     "appSecret": "fe8345ab163e29419c1adf13e6c8d6d3",
     "pageAccessToken": "EAAYDBTh90hMBAHwVJb4KTfvQv2lWl20YnISYtMIkslnZADDMOb9g5WOjrF2u7GQZCEeBzopyFZChGXsLWtPmEhLdjSRMmKhPkLfZAZCMXZAqaRpPb1Qux3CjmuGeebGACSTAbNzaK9iKx80yNVprLxuHHpMDqZAJgMSZA6P9zeujHAZDZD",
     "validationToken": "secondbot",
-    "serverURL": "https://pure-beach-87140.herokuapp.com/webhook"
+    "serverURL": "https://pure-beach-87140.herokuapp.com/"
 }
