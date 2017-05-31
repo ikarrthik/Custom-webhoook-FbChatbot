@@ -66,7 +66,7 @@ app.get('/webhook', function(req, res) {
   console.log("Web hook is invoked !!!!!!!!!!");
   if (req.query['hub.mode'] === 'subscribe' &&
       req.query['hub.verify_token'] === 'secondbot') {
-    console.log("Validating webhook"+req);
+    console.log("Validating webhook");
     res.status(200).send(req.query['hub.challenge']);
   } else {
     console.error("Failed validation. Make sure the validation tokens match.");
@@ -84,7 +84,7 @@ app.get('/webhook', function(req, res) {
  */
 app.post('/webhook', function (req, res) {
   var data = req.body;
-console.log("Web hook is invoked !!!!!!!!!!");
+console.log("Web hook is invoked !!!!!!!!!!"+req.body.object);
   // Make sure this is a page subscription
   if (data.object == 'page') {
     // Iterate over each entry
@@ -95,6 +95,8 @@ console.log("Web hook is invoked !!!!!!!!!!");
 
       // Iterate over each messaging event
       pageEntry.messaging.forEach(function(messagingEvent) {
+
+        console.log("Messenging event : + "+messagingEvent);
         if (messagingEvent.optin) {
           receivedAuthentication(messagingEvent);
         } else if (messagingEvent.message) {
